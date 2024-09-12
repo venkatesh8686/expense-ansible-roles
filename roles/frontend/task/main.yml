@@ -30,7 +30,7 @@
 
 - name: copy the config file
   ansible.builtin.template:
-    src: expense.conf.j2
+    src: templates/expense.conf.j2
     dest: /etc/nginx/default.d/expense.conf
 
 - name: restart the nginx
