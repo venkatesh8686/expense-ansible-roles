@@ -32,7 +32,9 @@
       remote_src: true
 
   - name: installing dependencies
-    ansible.builtin.command: npm install
+  tags:
+    - deployment
+  ansible.builtin.command: npm install
     args:
       chdir: /app
 
@@ -58,6 +60,8 @@
       state: import
 
   - name: Restart backend
+    tags:
+    - deployment
     ansible.builtin.systemd_service:
       name: backend
       state: started
