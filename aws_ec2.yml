@@ -1,9 +1,10 @@
-pulgin: amazon.aws.aws_ec2
-regoins:
+plugin: amazon.aws.aws_ec2
+regions:
 - us-east-1
 filters:
   tage:Name: backend
-hostname:
+  instance-state-name: running
+hostnames:
   - private-ip-address
 compose:
-  ansible_host: private-ip-address
+  ansible_host: private_ip_address
