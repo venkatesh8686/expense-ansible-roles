@@ -1,0 +1,9 @@
+pulgin: amazon.aws.aws_ec2
+regoins:
+- us-east-1
+filters:
+  tage:Name: backend
+hostname:
+  - private-ip-address
+compose:
+  ansible_host: private-ip-address
