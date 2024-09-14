@@ -3,7 +3,7 @@ regions:
 - us-east-1
 filters:
   tage:Name: backend
-  instance-state-name: running
+  instance-state-name : running
 hostnames:
   - private-ip-address
 compose:
